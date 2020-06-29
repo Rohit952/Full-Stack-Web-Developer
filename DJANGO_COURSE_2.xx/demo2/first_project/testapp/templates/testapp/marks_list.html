@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align:center;">Here are your records</h1>
+
+<!--{% if data %}-->
+<!--<ul>-->
+<!--    {% for info in data %}-->
+<!--      <li>{{info.english_marks}}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--{% else %}-->
+<!--        <p>No Records. Table Not Created.</p>-->
+<!--{% endif %}-->
+
+<div>
+      {% if data %}
+          <table border="2" align="center">
+            <thead>
+              <th>name</th>
+              <th>address</th>
+              <th>english_marks</th>
+              <th>maths_marks</th>
+              <th>science_marks</th>
+            </thead>
+
+            {% for info in data %}
+              <tr>
+                <td>{{ info.name }}</td>
+                <td>{{ info.address }}</td>
+                  <td>{{ info.english_marks }}</td>
+                  <td>{{ info.maths_marks }}</td>
+                  <td>{{ info.science_marks }}</td>
+              </tr>
+            {% endfor %}
+        </table>
+
+      {% else %}
+        <p>No data.</p>
+      {% endif %}
+</div>
+
+</body>
+</html>
