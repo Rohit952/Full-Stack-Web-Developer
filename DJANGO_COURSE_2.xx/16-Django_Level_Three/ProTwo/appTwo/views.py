@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from .forms import NewUserForm
 
 def index(request):
@@ -16,6 +16,7 @@ def users(request):
         if form.is_valid():
             form.save(commit=True)
             return index(request)
+            # return HttpResponseRedirect("https://www.google.com/")
         else:
             print('ERROR FORM INVALID')
 

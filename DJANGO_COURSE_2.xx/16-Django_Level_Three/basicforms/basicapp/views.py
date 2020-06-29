@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponseRedirect
 from . import forms
 # Create your views here.
 
@@ -19,3 +19,5 @@ def form_name_view(request):
             print("TEXT: "+form.cleaned_data['text'])
 
     return render(request,'basicapp/form_page.html',{'form':form})
+
+

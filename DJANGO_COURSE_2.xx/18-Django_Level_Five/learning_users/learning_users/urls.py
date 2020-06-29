@@ -23,4 +23,5 @@ urlpatterns = [
     path('special/', views.special,name='special'),
     path('basic_app/', include('basic_app.urls')),
     path('logout/', views.user_logout, name='logout'),
+
 ]
