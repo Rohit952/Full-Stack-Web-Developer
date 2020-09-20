@@ -6,12 +6,13 @@
     <title>Forms</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color: beige;">
 
-    <h1 style="text-align:center;">Fill out the form!</h1>
+    
     <div class="container">
+      <h1 style="text-align:center;">Fill out the form!</h1>
       <div class="row justify-content-center">
-        <div class="col-8">
+        <div style="background-color: bisque;" class="col-7 px-1">
           <hr class="mt-0 mb-4">
           <form method="POST">
             {{ form|crispy }}
